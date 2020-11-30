@@ -1,0 +1,105 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="ClientGlobalContext.js.aspx" type="text/javascript" ></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script> 
+        document.onreadystatechange = function(){
+            if(document.readyState == "complete") onDocumentLoad();
+        }    
+        function onDocumentLoad(){
+            createVueObject();
+        }
+        function createVueObject(){
+            var app = window.app = new Vue({
+                el: '#app',
+                data: {
+                context:{},
+                credits:[]
+                },
+                methods:{
+                    createContext :function(context){
+                        this.context = context;
+                    },
+                    setOpenFormOptions: function (entityFormOptions){
+                        entityFormOptions["openInNewWindow"] = true;
+                        entityFormOptions["width"] = 700;
+                        entityFormOptions["windowPosition"] = 1;
+                        entityFormOptions["navbar"] = "off";
+                    },
+                    openCredit: function(index){
+                        let data = this.credits[index].program;
+                        let entityFormOptions = {};
+                        entityFormOptions["entityName"] = "nav_credit";
+                        entityFormOptions["entityId"] = data.id;
+                        this.setOpenFormOptions(entityFormOptions);
+                        Xrm.Navigation.openForm(entityFormOptions)
+                        .then(
+                            success=>{},
+                            error=> {
+                                console.log(error.message);
+                            }
+                        );    
+                    },
+                    openModel: function(index){
+                        var data = this.credits[index].model;
+                        var entityFormOptions = {};
+                        entityFormOptions["entityName"] = "nav_model";
+                        entityFormOptions["entityId"] = data.id;
+                        this.setOpenFormOptions(entityFormOptions);
+                        Xrm.Navigation.openForm(entityFormOptions)
+                        .then(
+                            success=> {},
+                            error=> {
+                                console.log(error.message);
+                            }
+                        );    
+                    },
+                    getRecordCount: function(){
+                        return this.credits.length;
+                    },
+                    addCredit: function(program, model, period){
+                        this.credits.push({program:program, model:model, period});
+                    }
+                }
+            });
+        }
+        function fillGrid(context, entities){
+            if (!context || !entities) return;
+            if (!Array.isArray(entities)) return;
+            app.createContext(context);
+            entities.forEach(entity=>{
+                app.addCredit({id:entity.creditId, name:entity.creditName}, 
+                {id:entity.modelId, name:entity.modelName},
+                entity.period);
+            });
+        }
+    </script>
+    <style>
+        #app>tbody>tr>td:nth-child(1), #app>tbody>tr>td:nth-child(2){
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table id="app" class="table table-sm border-top-0">
+    <thead>
+        <tr>
+            <th scope="col">Кредитная программа</th>
+            <th scope="col">Модель</th>
+            <th scope="col">Срок кредита</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-if="getRecordCount()<=0">
+            <td colspan="3" class="text-center">отсутсвуют кредитные программы для данной марки автомобиля</td>
+        </tr>
+        <tr v-for="(credit, index) in credits">
+            <td v-on:click="openCredit(index)">{{ credit.program.name }}</td>
+            <td v-on:click="openModel(index)">{{ credit.model.name }}</td>
+            <td>{{ credit.period }}</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>
