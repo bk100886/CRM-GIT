@@ -93,11 +93,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
+    <Compile Include="Constants\CommunicationConstants.cs" />
     <Compile Include="Constants\ContactConstants.cs" />
     <Compile Include="Contracts\ICommunicationService.cs" />
     <Compile Include="Contracts\IConnectionService.cs" />
     <Compile Include="Contracts\IContactService.cs" />
     <Compile Include="Contracts\ILoggerService.cs" />
+    <Compile Include="CustomCommunication.cs" />
     <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\CrmServiceContext.cs" />
     <Compile Include="Entities\nav_communication.cs" />
@@ -114,6 +116,5 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

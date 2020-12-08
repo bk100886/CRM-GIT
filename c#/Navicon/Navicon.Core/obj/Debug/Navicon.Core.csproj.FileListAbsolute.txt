@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Core\bin\Debug\Navicon.Core.dll
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Core\bin\Debug\Navicon.Core.pdb
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Core\obj\Debug\Navicon.Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Core\obj\Debug\Navicon.Core.dll
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Core\obj\Debug\Navicon.Core.pdb
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Core\obj\Debug\Navicon.Core.csprojAssemblyReference.cache

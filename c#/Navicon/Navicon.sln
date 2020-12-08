@@ -3,6 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navicon.Plugins", "Navicon.Plugins\Navicon.Plugins.csproj", "{7F3D4B50-0AB2-4F26-A06B-110542266D60}"
+	ProjectSection(ProjectDependencies) = postProject
+		{259FE32B-C3B1-4855-8CE2-F956C1F4F5EF} = {259FE32B-C3B1-4855-8CE2-F956C1F4F5EF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navicon.ConsoleApp", "Navicon.ConsoleApp\Navicon.ConsoleApp.csproj", "{BD0E3B59-6288-4979-8D98-084C13BBBFC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navicon.Core", "Navicon.Core\Navicon.Core.csproj", "{3DD57FAC-9E1A-43BD-9FBC-B6554E34FEC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navicon.Data", "Navicon.Data\Navicon.Data.csproj", "{259FE32B-C3B1-4855-8CE2-F956C1F4F5EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navicon.Configuration", "Navicon.Configuration\Navicon.Configuration.csproj", "{8ED7FE5C-284F-4975-A203-7711D004CB3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{2B6BB2FF-F7D3-4013-8EDC-D7FB7172F655}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navicon.Communication.ConsoleApp", "Navicon.Communication.ConsoleApp\Navicon.Communication.ConsoleApp.csproj", "{FA9137D5-2EF2-491D-A5A1-F4D89B48F177}"
 EndProject
 Global
@@ -11,6 +26,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F3D4B50-0AB2-4F26-A06B-110542266D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F3D4B50-0AB2-4F26-A06B-110542266D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F3D4B50-0AB2-4F26-A06B-110542266D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F3D4B50-0AB2-4F26-A06B-110542266D60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD0E3B59-6288-4979-8D98-084C13BBBFC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD0E3B59-6288-4979-8D98-084C13BBBFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD0E3B59-6288-4979-8D98-084C13BBBFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD0E3B59-6288-4979-8D98-084C13BBBFC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD57FAC-9E1A-43BD-9FBC-B6554E34FEC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD57FAC-9E1A-43BD-9FBC-B6554E34FEC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD57FAC-9E1A-43BD-9FBC-B6554E34FEC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD57FAC-9E1A-43BD-9FBC-B6554E34FEC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{259FE32B-C3B1-4855-8CE2-F956C1F4F5EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{259FE32B-C3B1-4855-8CE2-F956C1F4F5EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{259FE32B-C3B1-4855-8CE2-F956C1F4F5EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{259FE32B-C3B1-4855-8CE2-F956C1F4F5EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ED7FE5C-284F-4975-A203-7711D004CB3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED7FE5C-284F-4975-A203-7711D004CB3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED7FE5C-284F-4975-A203-7711D004CB3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED7FE5C-284F-4975-A203-7711D004CB3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B6BB2FF-F7D3-4013-8EDC-D7FB7172F655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B6BB2FF-F7D3-4013-8EDC-D7FB7172F655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B6BB2FF-F7D3-4013-8EDC-D7FB7172F655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B6BB2FF-F7D3-4013-8EDC-D7FB7172F655}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA9137D5-2EF2-491D-A5A1-F4D89B48F177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA9137D5-2EF2-491D-A5A1-F4D89B48F177}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9137D5-2EF2-491D-A5A1-F4D89B48F177}.Release|Any CPU.ActiveCfg = Release|Any CPU

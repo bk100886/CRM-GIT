@@ -36,26 +36,19 @@ namespace Navicon.Communication.ConsoleApp.Services
             query.ColumnSet = new ColumnSet(Contact.Fields.Telephone1
                                             ,Contact.Fields.EMailAddress1);
             query.NoLock = true;
-            //934-5501002
-            //query.Criteria.AddFilter(LogicalOperator.Or);
-            
+            //Используем left join. Далее, если данные присоединенной таблицы nav_communication==null, то исключаем из запроса такие записи
+            //Это будет обозначать, что мы исключим контакты, которые есть в nav_communication
             var link = query.AddLink(nav_communication.EntityLogicalName, Contact.PrimaryIdAttribute, nav_communication.Fields.nav_contactid, JoinOperator.LeftOuter);
             link.EntityAlias = "nc";
+            link.Columns = new ColumnSet(nav_communication.Fields.nav_name);
             var filter = query.Criteria.AddFilter(LogicalOperator.Or);
             filter.AddCondition(Contact.Fields.EMailAddress1, ConditionOperator.NotNull);
             filter.AddCondition(Contact.Fields.Telephone1, ConditionOperator.NotNull);
             try
             {
-                //ЗДЕСЬ КАК ТО НУЖНО ОТОБРАТЬ ТЕ КОНТАКТЫ, КОТОРЫХ НЕТ В ОБЪЕКТЕ СРЕДСТВА СВЯЗИ
-                //var c = crmService.RetrieveMultiple(query).Entities.ToList();
-                //c.ForEach(item =>
-                //{
-                //    // var ownerRef = item.GetAttributeValue<EntityReference>(nav_communication.Fields.nav_contactid);
-                //    var fullnameAlised = (string)item.GetAttributeValue<AliasedValue>($"{link.EntityAlias}.{nav_communication.Fields.Id}").Value;
-
-                //});
-                    
-                result = crmService.RetrieveMultiple(query).Entities.Select(s => s.ToEntity<Contact>()).ToList();
+                result = crmService.RetrieveMultiple(query).Entities
+                         .Where(q=> q.GetAttributeValue<AliasedValue>($"{link.EntityAlias}.{nav_communication.Fields.nav_name}")==null)
+                         .Select(s => s.ToEntity<Contact>()).ToList();
             }
             catch (Exception ex)
             {

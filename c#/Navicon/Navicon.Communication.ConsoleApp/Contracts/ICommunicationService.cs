@@ -18,6 +18,10 @@ namespace Navicon.Communication.ConsoleApp.Contracts
         /// <returns>Список средств связи.</returns>
         List<nav_communication> GetMainCommunications();
 
-        
+        /// <summary>
+        /// Добавить запись.
+        /// </summary>
+        /// <param name="item">Информация об объекте.</param>
+        void Insert(nav_communication item);
     }
 }

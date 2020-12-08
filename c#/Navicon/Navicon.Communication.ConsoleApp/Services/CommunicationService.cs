@@ -40,6 +40,7 @@ namespace Navicon.Communication.ConsoleApp.Services
                                             ,nav_communication.Fields.nav_type
                                             ,nav_communication.Fields.nav_phone
                                             ,nav_communication.Fields.nav_email);
+            
             query.NoLock = true;
             query.Criteria.AddCondition(nav_communication.Fields.nav_main, ConditionOperator.Equal, "true");
             try
@@ -48,9 +49,23 @@ namespace Navicon.Communication.ConsoleApp.Services
             }
             catch (Exception ex)
             {
-                _loggerService.Error(ex.Message);
+                _loggerService.Error(ex.ToString());
             }
             return result;
+        }
+
+        /// <inheritdoc/>
+        public void Insert(nav_communication item)
+        {
+            _= item ?? throw new ArgumentNullException(nameof(item));
+            try
+            {
+                crmService.Create(item);
+            }
+            catch (Exception ex)
+            {
+                _loggerService.Error(ex.ToString());
+            }
         }
     }
 }

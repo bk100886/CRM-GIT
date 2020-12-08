@@ -14,11 +14,6 @@ namespace Navicon.Communication.ConsoleApp.Constants
         /// <summary>
         /// Номер телефона.
         /// </summary>
-        public const string Telephone1 = "Telephone1";
-
-        /// <summary>
-        /// Email.
-        /// </summary>
-        public const string Email1 = "Email1";
+        public const string Telephone = "Telephone";
     }
 }

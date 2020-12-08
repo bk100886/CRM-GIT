@@ -1,0 +1,9 @@
+Navicon.Plugins.dll
+Navicon.Configuration.dll
+Navicon.Core.dll
+SimpleInjector.dll
+Navicon.Data.dll
+Microsoft.Bcl.AsyncInterfaces.dll
+System.Threading.Tasks.Extensions.dll
+netstandard.dll
+System.Runtime.CompilerServices.Unsafe.dll

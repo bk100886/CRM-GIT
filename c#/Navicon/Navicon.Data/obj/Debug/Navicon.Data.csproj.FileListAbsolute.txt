@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Data\bin\Debug\Navicon.Data.dll
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Data\bin\Debug\Navicon.Data.pdb
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Data\bin\Debug\Navicon.Core.dll
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Data\bin\Debug\Navicon.Core.pdb
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Data\obj\Debug\Navicon.Data.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Data\obj\Debug\Navicon.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Data\obj\Debug\Navicon.Data.csproj.CopyComplete
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Data\obj\Debug\Navicon.Data.dll
+C:\Users\User\Desktop\Navicon\Education\CRM\c#\Navicon\Navicon.Data\obj\Debug\Navicon.Data.pdb

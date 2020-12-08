@@ -1,2 +1,1 @@
-2020-11-30 13:27:05,132 ERROR 1 NavLogger - 'nav_communication' entity doesn't contain attribute with Name = 'contactid' and NameMapping = 'Logical'. MetadataCacheDetails: ProviderType=Dynamic, StandardCache=True, IsLoadedInStagedContext = False, Timestamp=1853690, MinActiveRowVersion=1853690, MetadataInstanceId=55082254
-2020-11-30 13:30:23,690 ERROR 1 NavLogger - 'nav_communication' entity doesn't contain attribute with Name = 'contactid' and NameMapping = 'Logical'. MetadataCacheDetails: ProviderType=Dynamic, StandardCache=True, IsLoadedInStagedContext = False, Timestamp=1853690, MinActiveRowVersion=1853690, MetadataInstanceId=55082254
+2020-12-01 16:58:39,541 ERROR 1 NavLogger - System.Exception: Unable to Login to Dynamics CRM
